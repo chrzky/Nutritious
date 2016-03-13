@@ -27,16 +27,28 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     var previewLayer : AVCaptureVideoPreviewLayer?
     
     
-    
+    var segueHelper = UploadView()
     
     
     @IBOutlet var cameraView: UIView!
+    
+    
+    func prepareForSegue(sender: UIImage?) {
+        
+        let segue = UIStoryboardSegue(identifier: "sendImageSegue", source: self, destination: segueHelper)
+        if (segue.identifier == "sendImageSegue") {
+            if let destination = segue.destinationViewController as? UploadView {
+                destination.viaSegueImage = tempImageView.image
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
         
-        
+        prepareForSegue(tempImageView.image)
         
         
         //captureSession.decreaseSize(AVEdgeWidths.bounds)
@@ -200,6 +212,7 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         
         
     }
+    
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         

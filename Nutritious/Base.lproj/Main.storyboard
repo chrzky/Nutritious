@@ -19,17 +19,17 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7cj-dr-Vd8">
                                 <rect key="frame" x="156" y="95" width="288" height="352"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.85337738610000002" green="0.88714823300000001" blue="0.84982394790000004" alpha="0.88923980499999999" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="352" id="C8H-1P-GNi"/>
                                     <constraint firstAttribute="width" constant="288" id="k8M-3Q-wld"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ygh-Rg-Qbj">
-                                <rect key="frame" x="156" y="95" width="288" height="352"/>
+                                <rect key="frame" x="168" y="95" width="264" height="352"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="352" id="bZF-NE-KdJ"/>
-                                    <constraint firstAttribute="width" constant="288" id="gAP-RG-lMZ"/>
+                                    <constraint firstAttribute="width" constant="264" id="gAP-RG-lMZ"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -45,8 +45,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="first" id="acW-dT-cKf"/>
                     <connections>
-                        <outlet property="cameraView" destination="7cj-dr-Vd8" id="ClX-mm-Ih0"/>
+                        <outlet property="cameraView" destination="7cj-dr-Vd8" id="ixd-Vl-mgy"/>
                         <outlet property="tempImageView" destination="ygh-Rg-Qbj" id="Hx1-im-aa0"/>
+                        <segue destination="8rJ-Kc-sve" kind="show" identifier="sendImageSegue" id="XTL-06-zQo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -196,4 +197,7 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="XTL-06-zQo"/>
+    </inferredMetricsTieBreakers>
 </document>

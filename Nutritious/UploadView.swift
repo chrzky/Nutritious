@@ -14,8 +14,7 @@ class UploadView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
     @IBOutlet weak var previewImage: UIImageView!
     
-    
-    
+    var viaSegueImage = UIImage!()
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -26,6 +25,8 @@ class UploadView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        previewImage.image = viaSegueImage
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardNotification:", name: UIKeyboardWillChangeFrameNotification, object: nil)
         
     }
