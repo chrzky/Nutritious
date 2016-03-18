@@ -1,0 +1,6 @@
+framework module Pods_Nutritious {
+  umbrella header "Pods-Nutritious-umbrella.h"
+
+  export *
+  module * { export * }
+}

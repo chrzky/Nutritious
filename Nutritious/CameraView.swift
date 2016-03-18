@@ -9,13 +9,12 @@
 
 
 import UIKit
+import SwiftyJSON
 
 import AVFoundation
 
 
-
 class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
     
     
     // Setting up the variables for the camera
@@ -27,28 +26,16 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     var previewLayer : AVCaptureVideoPreviewLayer?
     
     
-    var segueHelper = UploadView()
     
     
     @IBOutlet var cameraView: UIView!
     
-    
-    func prepareForSegue(sender: UIImage?) {
-        
-        let segue = UIStoryboardSegue(identifier: "sendImageSegue", source: self, destination: segueHelper)
-        if (segue.identifier == "sendImageSegue") {
-            if let destination = segue.destinationViewController as? UploadView {
-                destination.viaSegueImage = tempImageView.image
-            }
-        }
-    }
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
         
-        prepareForSegue(tempImageView.image)
         
         
         //captureSession.decreaseSize(AVEdgeWidths.bounds)
@@ -77,7 +64,13 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         
     }
     
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
     
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
     
     
     
@@ -200,7 +193,15 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
                     
                     UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
                     
-                    
+                    // load tempImageView as fromCameraToUploadView into UploadView
+                    if let tabBar = self.tabBarController,
+                        let controllers = tabBar.viewControllers {
+                            
+                            if let uploadView = controllers[1] as? UploadView {
+                                
+                                uploadView.fromCameraToUploadView = self.tempImageView.image
+                        }
+                    }
                 }
                 
                 

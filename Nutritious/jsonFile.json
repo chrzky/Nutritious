@@ -1,0 +1,211 @@
+{
+    "Meals" : {
+            
+            
+        "Meat-eaters": {
+            
+            
+            
+            "Meal1": {
+                
+                "Photo": "steak-on-rice.jpg",
+                
+                "Name": "Steak on rice",
+                
+                "Rating": "5",
+                
+                "Username": "Saul",
+                
+                "Description": "Tinderloin steak on rice with carrots"
+                
+            },
+            
+            
+            
+            "Meal2": {
+                
+                "Photo": "pizza-salami.jpg",
+                
+                "Name": "Pizza Salami",
+                
+                "Rating": "2",
+                
+                "Username": "Jesse",
+                
+                "Description": "Pizza beim Italiener um die Ecke"
+                
+            },
+            
+            
+            
+            "Meal3": {
+                
+                "Photo": "Toast-Hawaii.jpg",
+                
+                "Name": "Toast Hawaii",
+                
+                "Rating": "5",
+                
+                "Username": "Mike",
+                
+                "Description": ""
+                
+            },
+            
+        },
+        
+        
+        
+        "Vegetarians": {
+            
+            
+            
+            "Meal1": {
+                
+                "Photo": "vegetarian-wrap.jpg",
+                
+                "Name": "Veggie Wrap",
+                
+                "Rating": "9",
+                
+                "Username": "Walt",
+                
+                "Description": "Vegetarian wrap with vegetables"
+                
+            },
+            
+            
+            
+            "Meal2": {
+                
+                "Photo": "vegetarian-chili.jpg",
+                
+                "Name": "Vegetarian Chili",
+                
+                "Rating": "10",
+                
+                "Username": "Tyrion",
+                
+                "Description": "Chili with beans and soy"
+                
+            },
+            
+        },
+        
+        
+        
+        "Vegans":{
+            
+            
+            
+            "Meal1": {
+                
+                "Photo": "tagliatelle-mushroom-tomatoes.png",
+                
+                "Name": "Tagliatelle with mushroom sauce and tomatoes",
+                
+                "Rating": "9",
+                
+                "Username": "Arya",
+                
+                "Description": "Vegan pasta with zucchini, mushrooms and tomatoes"
+                
+            },
+            
+            
+            
+            "Meal2": {
+                
+                "Photo": "vegan-cuscus-salad.jpg",
+                
+                "Name": "Cuscus salad",
+                
+                "Rating": "10",
+                
+                "Username": "Jamie",
+                
+                "Description": "Vegan cuscus salad with quinoa"
+                
+            },
+            
+        },
+        
+        
+        
+        "Pescetarians":{
+            
+            "Meal1": {
+                
+                "Photo": "forelle-mit-kartoffeln.jpg",
+                
+                "Name": "Trout with potatoes",
+                
+                "Rating": "2",
+                
+                "Username": "Jon Snow",
+                
+                "Description": "Trout with potatoes and rosemary"
+                
+            },
+            
+        },
+        
+        
+        
+        "MyMeals": {
+            
+            
+            
+            "Meal1": {
+                
+                "Photo": "steak-on-rice.jpg",
+                
+                "Name": "Steak on rice",
+                
+                "Rating": "5",
+                
+                "Username": "Saul",
+                
+                "Description": "Tinderloin steak on rice with carrots"
+                
+            },
+            
+            
+            
+            "Meal2": {
+                
+                "Photo": "steak-on-rice.jpg",
+                
+                "Name": "Steak on rice",
+                
+                "Rating": "5",
+                
+                "Username": "Saul",
+                
+                "Description": "Tinderloin steak on rice with carrots"
+                
+            },
+            
+            
+            
+            "Meal3": {
+                
+                "Photo": "steak-on-rice.jpg",
+                
+                "Name": "Steak on rice",
+                
+                "Rating": "5",
+                
+                "Username": "Saul",
+                
+                "Description": "Tinderloin steak on rice with carrots"
+                
+            },
+            
+            
+        },
+        
+        
+    }
+
+}

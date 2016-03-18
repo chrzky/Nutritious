@@ -7,30 +7,19 @@
 //
 
 import XCTest
+
 @testable import Nutritious
 
 class NutritiousTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    var testImage = UIImage()
+    var testDate = NSDate()
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+    func testMealInitialization() {
+        // Success case
+        let potentialItem = Meal(photo: testImage, nameOfMeal: "Schweinsbraten", rating: 5, username: "Sepp", date: testDate)
+        
+        
     }
     
 }
